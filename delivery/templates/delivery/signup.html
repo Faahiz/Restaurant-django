@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>SignUp</title>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'delivery/css/style.css' %}">
+</head>
+<body>
+    <div>
+        <form action="{% url 'handle_signup' %}" method="POST">
+
+            {% csrf_token %}
+
+            <h3>Signup page:</h3>
+            Username:<input type="text" name="name" placeholder="Username" required></br>
+            Phone:<input type="number" name="phone" placeholder="Phone no" required></br>
+            Address:<input type="textarea" name="address" placeholder="Address" required></br>
+            Email:<input type="email" name="email" placeholder="Email" required></br>
+            Password:<input type="password" name="password" placeholder="Password" required></br>
+            
+            <button type="submit">SIGN UP</button> 
+        </form>
+    </div>
+</body>
+</html>
