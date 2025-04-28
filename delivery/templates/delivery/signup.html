@@ -2,7 +2,7 @@
 <html>
 <head><title>SignUp</title>
     {% load static %}
-<link rel="stylesheet" href="{% static 'delivery/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'delivery/css/styles.css' %}">
 </head>
 <body>
     <div>
@@ -11,11 +11,11 @@
             {% csrf_token %}
 
             <h3>Signup page:</h3>
-            Username:<input type="text" name="name" placeholder="Username" required></br>
-            Phone:<input type="number" name="phone" placeholder="Phone no" required></br>
-            Address:<input type="textarea" name="address" placeholder="Address" required></br>
-            Email:<input type="email" name="email" placeholder="Email" required></br>
-            Password:<input type="password" name="password" placeholder="Password" required></br>
+            <input type="text" name="name" placeholder="Username" required></br>
+            <input type="number" name="phone" placeholder="Phone no" required></br>
+            <input type="text" name="address" placeholder="Address" required></br>
+            <input type="email" name="email" placeholder="Email" required></br>
+            <input type="password" name="password" placeholder="Password" required></br>
             
             <button type="submit">SIGN UP</button> 
         </form>
