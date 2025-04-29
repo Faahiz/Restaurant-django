@@ -1,0 +1,71 @@
+/* Admin Page Styling */
+
+.admin-header {
+    background-color: #00796b;
+    padding: 12px 20px; /* reduced height */
+    text-align: center;
+    color: white;
+    font-size: 1.6rem; /* slightly smaller font */
+    font-weight: bold;
+}
+
+body {
+    background-color: #e2d1c3;
+}
+
+/* Main Section slightly higher */
+.admin-main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* align to top instead of center */
+    height: calc(100vh - 60px); /* adjust height to fill remaining space */
+    padding: 40px 20px 20px;
+    background: #f0f4f5;
+}
+
+.admin-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.admin-card h2 {
+    color: #00796b;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.admin-card p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.admin-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.admin-btn {
+    padding: 12px 20px;
+    background-color: #00796b;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.admin-btn:hover {
+    background-color: #004d40;
+}

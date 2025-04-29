@@ -1,0 +1,114 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #00796b;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.user-info span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.cart img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Main Section */
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Table Styling */
+.restaurants-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+.restaurants-table th, .restaurants-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.restaurants-table th {
+    background-color: #00796b;
+    color: white;
+    font-weight: bold;
+}
+
+.restaurants-table td {
+    background-color: #ffffff;
+}
+
+.restaurants-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Restaurant Image Styling */
+.restaurant-image {
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Button Styling */
+.view-menu-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #00796b;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-menu-btn:hover {
+    background-color: #004d40;
+    transform: translateY(-2px);
+}

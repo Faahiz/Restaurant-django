@@ -1,0 +1,66 @@
+/* Background for this page */
+.menu-item-body {
+    background-color: #e0f2f1;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centered form box */
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 60px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Form heading in teal */
+.form-heading {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #00796b;
+}
+
+/* Labels and inputs */
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #00796b;
+    outline: none;
+}
+
+/* Submit button */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #00796b;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #00695c;
+}

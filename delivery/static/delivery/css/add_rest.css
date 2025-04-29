@@ -1,0 +1,86 @@
+/* Header styling */
+.admin-header {
+    background-color: #00796b;
+    padding: 12px 20px;
+    text-align: center;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+/* Main content layout */
+.admin-main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: calc(100vh - 60px);
+    background: #f0f4f5;
+    padding: 40px 20px;
+}
+
+/* Card layout */
+.admin-card {
+    background: #ffffff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Make form smaller */
+.small-card {
+    max-width: 400px;
+}
+
+/* Card heading */
+.admin-card h2 {
+    color: #00796b;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Form layout */
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+/* Labels */
+.admin-form label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Input fields */
+.admin-form input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Submit button */
+.admin-btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #00796b;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-btn:hover {
+    background-color: #004d40;
+}

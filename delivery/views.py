@@ -12,22 +12,26 @@ def signin(request):
 def signup(request):
     return render(request, 'delivery/signup.html')
 
+# Handle Login
 def handle_login(request):
     
-
     if request.method == 'POST':
         username = request.POST.get('name')
         password = request.POST.get('pass')
         
         try:
-            cust = Customer.objects.get(username = username, password = password)
-            return render(request, 'delivery/success.html')
-        except:
-            return render(request, 'delivery/failed.html')
+            Customer.objects.get(username = username, password = password)
+            if username == 'Admin':
+                return render(request, 'delivery/success.html')
+            else:
+                restaurants = Restaurant.objects.all()
+                return render(request, 'delivery/customer_home.html',  {"restaurants":restaurants, "username":username})
 
-    else:
-        return HttpResponse("invalid")
+        except Customer.DoesNotExist:
+            return render(request, 'delivery/failed.html')
+    return HttpResponse("invalid")
     
+# Handle Sign Up
 def handle_signup(request):
     if request.method == 'POST':
         username = request.POST.get('name')
@@ -37,7 +41,7 @@ def handle_signup(request):
         password = request.POST.get('password')
 
         try:
-            cust = Customer.objects.get(username = username)
+            Customer.objects.get(username = username)
         except: 
             c = Customer(username = username, phone = phone, address = address, email = email, password = password)
             c.save()
@@ -153,3 +157,13 @@ def delete_menuItem(request, menuItem_id):
 
     restaurants = Restaurant.objects.all()
     return render(request, 'delivery/show_restaurants.html', {"restaurants": restaurants})
+
+# Customer Menu
+def customer_menu(request, restaurant_id):
+    restaurant = get_object_or_404(Restaurant, id=restaurant_id)
+    menu_items = restaurant.menu_items.all()
+    return render(request, 'delivery/customer_menu.html', {
+        'restaurant': restaurant,
+        'menu_items': menu_items,
+        
+    })

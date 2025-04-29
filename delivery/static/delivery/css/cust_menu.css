@@ -1,0 +1,89 @@
+/* delivery/css/styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #e2d1c3;
+}
+
+/* Make header background green and text white for contrast */
+.restaurant-header {
+    display: flex;
+    align-items: center;
+    background-color: #00796b; /* Green */
+    color: white;
+    padding: 20px;
+    border-bottom: 2px solid #00796b;
+}
+
+/* Table header row with green background and white text */
+.menu-table thead {
+    background-color: #00796b;
+    color: white;
+}
+
+
+.restaurant-info {
+    display: flex;
+    align-items: center;
+}
+
+.restaurant-image {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.restaurant-details h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.menu-section {
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.menu-table th, .menu-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.menu-item-image {
+    width: 80px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.veg {
+    color: green;
+    font-weight: bold;
+}
+
+.non-veg {
+    color: red;
+    font-weight: bold;
+}
+
+button {
+    padding: 6px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #218838;
+}
