@@ -1,31 +1,72 @@
-/* delivery/css/styles.css */
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #e2d1c3;
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Make header background green and text white for contrast */
-.restaurant-header {
-    display: flex;
-    align-items: center;
-    background-color: #00796b; /* Green */
-    color: white;
-    padding: 20px;
-    border-bottom: 2px solid #00796b;
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
+    color: #333;
 }
 
-/* Table header row with green background and white text */
-.menu-table thead {
+/* Header Styling */
+header {
     background-color: #00796b;
     color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.user-info span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Header Buttons */
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-buttons form {
+    display: inline;
+}
+
+/* Restaurant Info Section */
 .restaurant-info {
     display: flex;
     align-items: center;
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .restaurant-image {
@@ -40,6 +81,12 @@ body {
     font-size: 2em;
 }
 
+.restaurant-details h3 {
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+/* Menu Section */
 .menu-section {
     padding: 20px;
     background-color: #fff;
@@ -47,10 +94,16 @@ body {
     border-radius: 8px;
 }
 
+/* Menu Table */
 .menu-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+}
+
+.menu-table thead {
+    background-color: #00796b;
+    color: white;
 }
 
 .menu-table th, .menu-table td {
@@ -65,6 +118,7 @@ body {
     border-radius: 4px;
 }
 
+/* Veg / Non-Veg Tags */
 .veg {
     color: green;
     font-weight: bold;
@@ -75,6 +129,7 @@ body {
     font-weight: bold;
 }
 
+/* Buttons */
 button {
     padding: 6px 12px;
     background-color: #28a745;
@@ -87,3 +142,48 @@ button {
 button:hover {
     background-color: #218838;
 }
+
+/* Checkout Section */
+.checkout-section {
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+.total-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.checkout-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.checkout-button:hover {
+    background-color: #005f56;
+}
+
+/* Back to Menu/Home Link */
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-link:hover {
+    background-color: #5a6268;
+}
+

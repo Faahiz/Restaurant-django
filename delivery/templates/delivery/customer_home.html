@@ -10,20 +10,30 @@
 </head>
 <body>
     <!-- Header Section -->
-    <header>
+     <header>
         <div class="header-container">
             <!-- Logo -->
             <div class="logo">
                 <img src="{% static 'photo/logo.png' %}" alt="MealMate Logo" width="50">
             </div>
-            
-            <!-- Customer's Name and Icon -->
+
+            <!-- User Info -->
             <div class="user-info">
                 <img src="{% static 'photo/user_icon.png' %}" alt="User Icon" class="user-icon">
                 <span>Welcome, {{ username }}</span>
             </div>
 
-            
+            <!-- Buttons -->
+            <div class="header-buttons">
+                <form method="GET" action="{% url 'show_cart_page' username %}">
+                    {% csrf_token %}
+                    <button type="submit">View Cart</button>
+                </form>
+                <form method="POST" >
+                    {% csrf_token %}
+                    <button type="submit" onclick="return confirm('Are you sure you want to logout?')">Logout</button>
+                </form>
+            </div>
         </div>
     </header>
 
@@ -49,7 +59,7 @@
                     <td>{{ i.cuisine }}</td>
                     <td>{{ i.rating }}</td>
                     <td>
-                        <a href="{% url 'customer_menu' i.id %}" class="view-menu-btn">View Menu</a>
+                        <a href="{% url 'customer_menu' i.id username %}" class="view-menu-btn">View Menu</a>
                     </td>
                 </tr>
                 {% endfor %}
