@@ -27,7 +27,7 @@ def handle_login(request):
         try:
             Customer.objects.get(username = username, password = password)
             if username == 'Admin':
-                return render(request, 'delivery/success.html')
+                return render(request, 'delivery/admin_home.html')
             else:
                 restaurants = Restaurant.objects.all()
                 return render(request, 'delivery/customer_home.html',  {"restaurants":restaurants, "username":username})
